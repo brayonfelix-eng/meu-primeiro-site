@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Veloz | Supercarros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">MUNDO<span>VELOZ</span></div>
+        <nav>
+            <a href="#home">Início</a>
+            <a href="#maquinas">Máquinas</a>
+            <a href="#linha-tempo">Linha do Tempo</a>
+            <a href="#quiz">Quiz Veloz</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>A Paixão por Alta Velocidade</h2>
+            <p>Conheça os carros mais rápidos, potentes e icônicos de todos os tempos.</p>
+            <button onclick="boasVindas()">Acelerar!</button>
+        </div>
+    </section>
+
+    <section id="maquinas" class="container">
+        <h2>Supermáquinas Modernas</h2>
+        <div class="grid-carros">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=500" alt="Bugatti">
+                <h3>Bugatti Chiron</h3>
+                <p>Velocidade Máxima: <strong>490 km/h</strong>. Um monstro das pistas com motor W16.</p>
+                <a href="https://www.bugatti.com" target="_blank" class="btn-link">Ver Site Oficial</a>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=500" alt="Koenigsegg">
+                <h3>Koenigsegg Jesko</h3>
+                <p>Velocidade Máxima: <strong>530 km/h</strong> (Teórica). Engenharia extrema e aerodinâmica pura.</p>
+                <a href="https://www.koenigsegg.com" target="_blank" class="btn-link">Ver Site Oficial</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="linha-tempo" class="container bg-dark">
+        <h2>Evolução da Velocidade</h2>
+        <div class="timeline">
+            <div class="time-item">
+                <h4>1987 - Ferrari F40</h4>
+                <p>O primeiro carro de rua a quebrar a barreira dos 320 km/h (200 mph).</p>
+            </div>
+            <div class="time-item">
+                <h4>1993 - McLaren F1</h4>
+                <p>Alcançou 386 km/h, tornando-se o carro aspirado mais rápido do mundo até hoje.</p>
+            </div>
+            <div class="time-item">
+                <h4>2025+ - Hipercarros Elétricos</h4>
+                <p>Acelerações de 0 a 100 km/h em menos de 2 segundos com motores 100% elétricos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="container">
+        <h2>Desafio Veloz: Você conhece carros?</h2>
+        <div class="quiz-box">
+            <p id="pergunta">Qual é o carro mais rápido do mundo atualmente?</p>
+            <button onclick="verificarResposta('Bugatti')">Bugatti Chiron</button>
+            <button onclick="verificarResposta('Koenigsegg')">Koenigsegg Jesko</button>
+            <button onclick="verificarResposta('Fusca')">Fusca Turbinado</button>
+            <p id="resultado-quiz"></p>
+        </div>
+    </section>
+
+    <section id="contato" class="container bg-dark">
+        <h2>Entre para o Clube</h2>
+        <p>Receba novidades sobre o mundo dos supercarros.</p>
+        <form id="form-contato" onsubmit="enviarFormulario(event)">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <textarea placeholder="Qual seu carro favorito?" required></textarea>
+            <button type="submit">Enviar Inscrição</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido pela Equipe de Devs Alunos. Projeto Carros Velozes.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
