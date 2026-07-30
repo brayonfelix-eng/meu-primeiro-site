@@ -110,7 +110,7 @@
 
     // Envia para o Supabase
     const { data, error } = await _supabase
-      .from('NOME_DA_TABELA') // Troque pelo nome da sua tabela no Supabase
+      .from('Contato') // Troque pelo nome da sua tabela no Supabase
       .insert([{ NOME_DA_COLUNA: valorDigitado }]); // Troque pelo nome da coluna
 
     if (error) {
