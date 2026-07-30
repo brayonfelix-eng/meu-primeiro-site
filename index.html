@@ -90,5 +90,35 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+  // 2. Conexão com a sua URL do Supabase
+  const SUPABASE_URL = 'https://mnbpgcqctdpocraukrky.supabase.co';
+  
+  // ATENÇÃO: Cole sua chave anon (public) dentro das aspas abaixo
+  const SUPABASE_KEY = 'SUA_CHAVE_ANON_AQUI'; 
+
+  const _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  // 3. Função para enviar os dados
+  async function enviarDados(event) {
+    event.preventDefault(); // Não recarrega a página
+
+    // Pega o que o usuário digitou no input
+    const valorDigitado = document.getElementById('MEU_INPUT_ID').value;
+
+    // Envia para o Supabase
+    const { data, error } = await _supabase
+      .from('NOME_DA_TABELA') // Troque pelo nome da sua tabela no Supabase
+      .insert([{ NOME_DA_COLUNA: valorDigitado }]); // Troque pelo nome da coluna
+
+    if (error) {
+      alert('Erro ao salvar: ' + error.message);
+    } else {
+      alert('Dados salvos com sucesso!');
+    }
+  }
+</script>
 </body>
 </html>
