@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | AutoVeloce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Auto<span>Veloce</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="supercarros.html">Supercarros</a></li>
+                <li><a href="classicos.html">Clássicos</a></li>
+                <li><a href="tecnologia.html">Tecnologia</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" style="max-width: 600px;">
+        <div class="title-wrapper">
+            <h2 class="section-title">Fale Conosco</h2>
+        </div>
+        <form style="background: #1f2833; padding: 30px; border-radius: 10px;">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" rows="5" placeholder="Sua mensagem ou sugestão de carro..."></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%;">Enviar Mensagem</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AutoVeloce. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
