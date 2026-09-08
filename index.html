@@ -78,28 +78,23 @@
     </footer>
 
     <!-- ================= CONEXÃO COM O SUPABASE ================= -->
-    <!-- 1. Biblioteca Oficial do Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script>
-        // 2. Credenciais de acesso configuradas
         const SUPABASE_URL = 'https://kmwrbnlanholpqiwwfii.supabase.co'; 
         const SUPABASE_KEY = 'sb_publishable_ruiMLz8KNqeBZlxvtsAr1Q_6yP9vvVG';
 
-        // 3. Inicializa o cliente do Supabase
         const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-        // 4. Função para capturar os dados do formulário e salvar no banco
         async function enviarContato(event) {
-            event.preventDefault(); // Impede a página de recarregar
+            event.preventDefault();
 
-            // Pega os valores informados pelo usuário nos campos do formulário
             const nomeInput = document.getElementById('nome').value;
             const emailInput = document.getElementById('email').value;
             const telefoneInput = document.getElementById('telefone').value;
             const observacoesInput = document.getElementById('observacoes').value;
 
-            // Envia os dados para a tabela "Contato" no Supabase
+            // Nomes idênticos aos da sua imagem (tudo minúsculo e sem ç)
             const { data, error } = await supabaseClient
                 .from('Contato')
                 .insert([
@@ -116,7 +111,7 @@
                 console.error('Detalhes do erro:', error);
             } else {
                 alert('Contato salvo com sucesso no banco de dados!');
-                document.getElementById('meuFormulario').reset(); // Limpa os campos após enviar
+                document.getElementById('meuFormulario').reset();
             }
         }
     </script>
