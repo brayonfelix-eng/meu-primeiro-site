@@ -94,7 +94,7 @@
             const telefoneInput = document.getElementById('telefone').value;
             const observacoesInput = document.getElementById('observacoes').value;
 
-            // Nomes idênticos aos da sua imagem (tudo minúsculo e sem ç)
+            // Envio para colunas em minúsculo no Supabase
             const { data, error } = await supabaseClient
                 .from('Contato')
                 .insert([
